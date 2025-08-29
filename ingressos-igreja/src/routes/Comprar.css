@@ -1,0 +1,22 @@
+.comprar {
+  padding: 40px 20px;
+}
+
+.comprar h2 {
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.formulario input, 
+.formulario select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

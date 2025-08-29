@@ -1,0 +1,13 @@
+.sobre {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: auto;
+}

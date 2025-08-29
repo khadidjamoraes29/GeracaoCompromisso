@@ -1,0 +1,127 @@
+/* Estilos para a seção hero com o botão */
+.home {
+  width: 100%;
+  background-color: #2a2c2b;
+  align-items: center; /* Centraliza todo o conteúdo horizontalmente */
+  text-align: center;
+}
+
+.hero-images {
+  width: 100%;
+  position: relative; /* Necessário para posicionar o botão ou a seta */
+}
+
+/* Estilos de visibilidade das imagens (desktop/mobile) */
+.desktop-image {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.mobile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .desktop-image {
+    display: block;
+  }
+  .mobile-image {
+    display: none;
+  }
+}
+
+/* Centralizando o botão de Comprar Ingresso */
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza o item filho (o botão) */
+  margin-top: -50px; /* Eleva o botão para que fique por cima da imagem */
+  position: relative;
+  z-index: 10; /* Garante que o botão fique na frente de outros elementos */
+}
+
+.btn {
+  /* Estilize seu botão aqui, se ainda não o fez */
+  background-color: #4f23bf;
+  color: #f5f4f2;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3b1c90;
+}
+
+/* Estilos para a seta animada */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem; /* Espaçamento entre o botão e a seta */
+  color: #fcfcfc;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.arrow-down {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #4f23bf; /* Criando a ponta da seta */
+  border-bottom: 2px solid #4f23bf;
+  transform: rotate(45deg); /* Rotaciona para apontar para baixo */
+  animation: bounce 2s infinite; /* Aplica a animação de pulo */
+}
+
+/* Animação para a seta */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(5px) rotate(45deg);
+  }
+}
+
+/* Carrossel robusto */
+/* ... seus estilos existentes ... */
+
+/* Estilos para o carrossel com react-slick */
+.carousel {
+  width: 100%;
+  padding: 2rem 0;
+  overflow: visible;
+}
+
+/* Container de cada slide no Slick */
+.slick-image-container {
+  padding: 0 50px; /* Espaçamento entre as imagens */
+  transition: transform 0.3s ease;
+}
+
+.slick-image-container img {
+  width: 100%; /* A imagem preenche a largura do seu container */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Classe que o Slick aplica ao slide ativo (central) */
+.slick-slide.slick-center .slick-image-container {
+  transform: scale(1.2);
+  filter: saturate(1.2);
+}
+
+/* Estilos de opacidade para as imagens laterais */
+.slick-slide:not(.slick-center) .slick-image-container img {
+  opacity: 0.7; /* Imagens laterais com opacidade menor */
+}
