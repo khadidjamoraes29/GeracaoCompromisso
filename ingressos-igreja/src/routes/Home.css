@@ -96,14 +96,15 @@
 
 /* Estilos para o carrossel com react-slick */
 .carousel {
-  width: 100%;
+  max-width: 1200px; /* limite máximo no desktop */
+  margin: 0 auto;    /* centraliza */
   padding: 2rem 0;
-  overflow: visible;
+  overflow: hidden;  /* previne scroll horizontal */
 }
 
 /* Container de cada slide no Slick */
 .slick-image-container {
-  padding: 0 50px; /* Espaçamento entre as imagens */
+  padding: 0 15px; /* Espaçamento entre as imagens */
   transition: transform 0.3s ease;
 }
 
@@ -115,10 +116,10 @@
   transition: all 0.3s ease;
 }
 
-/* Classe que o Slick aplica ao slide ativo (central) */
-.slick-slide.slick-center .slick-image-container {
-  transform: scale(1.2);
-  filter: saturate(1.2);
+@media (max-width: 768px) {
+  .slick-slide.slick-center .slick-image-container {
+    transform: scale(1.05); /* menos exagerado */
+  }
 }
 
 /* Estilos de opacidade para as imagens laterais */

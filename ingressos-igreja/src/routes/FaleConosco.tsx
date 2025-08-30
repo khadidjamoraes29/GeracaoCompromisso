@@ -1,35 +1,30 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import "./FaleConosco.css";
 
 export default function FaleConosco() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="faleconosco-page">
       <NavBar />
-      <main className="flex-1 max-w-2xl mx-auto px-4 py-10">
-        <h2 className="text-3xl font-bold mb-6 text-center">Fale Conosco</h2>
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Seu nome"
-            className="w-full p-3 border rounded"
-          />
-          <input
-            type="email"
-            placeholder="Seu e-mail"
-            className="w-full p-3 border rounded"
-          />
-          <textarea
-            placeholder="Digite sua mensagem"
-            className="w-full p-3 border rounded h-32"
-          />
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            Enviar
-          </button>
+
+      <main className="faleconosco-main">
+        <div className="faleconosco-header">
+          
+          <h2>Fale Conosco</h2>
+          <p>
+            Tem alguma dúvida, sugestão ou precisa de ajuda? Preencha o formulário
+            abaixo e entraremos em contato com você o mais rápido possível.
+          </p>
+        </div>
+
+        <form className="faleconosco-form">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu e-mail" required />
+          <textarea placeholder="Digite sua mensagem" required />
+          <button type="submit">Enviar</button>
         </form>
       </main>
+
       <Footer />
     </div>
   );
